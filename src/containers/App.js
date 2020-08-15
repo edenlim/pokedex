@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import {
-  withRouter,
   Route,
   Switch,
-  Link,
-  Redirect
+  Link
 } from 'react-router-dom';
 import Home from './Home'
+import Dex from './Dex'
 
 const paths = [
   {name: 'home'},
@@ -34,6 +33,11 @@ class App extends Component {
           exact
           path="/home"
           render={props => <Home {...props} />}
+        />
+        <Route
+          exact
+          path="/dex"
+          render={props => <Dex {...props} />}
         />
       </Switch>
     </div>
