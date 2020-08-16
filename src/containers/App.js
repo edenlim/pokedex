@@ -5,12 +5,12 @@ import {
 } from 'react-router-dom';
 import Home from './Home'
 import Dex from './Dex'
-import HeadNav from '../components/HeadNav'
+import HeadNav from '../components/shared/HeadNav'
 
 // Array for nav
 const paths = [
   {name: 'move'},
-  {name: 'dex'}
+  {name: 'pokemon'}
 ]
 
 // Switch render based on home path
@@ -29,7 +29,7 @@ class App extends Component {
         />
         <Route
           exact
-          path="/dex"
+          path="/pokemon"
           render={props => <Dex {...props} />}
         />
       </Switch>

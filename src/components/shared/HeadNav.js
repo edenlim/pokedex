@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import constants from '../constants/constants'
-import * as utilities from '../scripts/utilities'
+import constants from '../../constants/constants'
+import * as utilities from '../../scripts/utilities'
 
 class HeadNav extends Component {
   render(){
