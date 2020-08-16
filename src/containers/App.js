@@ -1,37 +1,30 @@
 import React, {Component} from 'react';
-import styled from 'styled-components';
 import {
   Route,
   Switch,
-  Link
 } from 'react-router-dom';
 import Home from './Home'
 import Dex from './Dex'
+import HeadNav from '../components/HeadNav'
 
+// Array for nav
 const paths = [
-  {name: 'home'},
+  {name: 'move'},
   {name: 'dex'}
 ]
 
+// Switch render based on home path
 class App extends Component {
   render(){
   return (
     <div className="App">
-      <H1>Hi</H1>
-      <div>
-        {paths.map(path => (
-          <Link
-            key={path.name}
-            to={`/${path.name}`}
-          >
-            <div>{path.name}</div>
-          </Link>
-        ))}
-      </div>
+      <HeadNav
+        paths={paths}
+      />
       <Switch>
         <Route
           exact
-          path="/home"
+          path="/"
           render={props => <Home {...props} />}
         />
         <Route
@@ -45,7 +38,3 @@ class App extends Component {
 }
 
 export default App;
-
-const H1 = styled.h1`
-  color: black;
-`

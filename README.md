@@ -13,10 +13,10 @@ The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
 
 ## Technologies used
-## Javascript
-## CSS
-## React
-## AJAX
+### `Javascript`
+### `CSS`
+### `React`
+### `AJAX`
 
 
 ## Packages used
@@ -24,5 +24,9 @@ You will also see any lint errors in the console.
 ### `React`
 
 ### `React-router-DOM`
+
+### `Redux`
+
+### `React Redux`
 
 ### `Styled-Components`

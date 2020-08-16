@@ -1,7 +1,3 @@
-export const testFunc = () => {
-  console.log('test func AJAX')
-}
-
 export const request = (query, callback) => {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function () {
