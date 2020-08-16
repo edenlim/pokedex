@@ -8,7 +8,6 @@ import Display from '../components/dex/display'
 class Dex extends Component {
   render() {
     const { search } = this.props
-
     const { match } = this.props
     return (
       <div className="dex">
@@ -16,8 +15,7 @@ class Dex extends Component {
         <Searchbar
           path={match.path}
         />
-
-        <Display/>
+        {search.name && <Display/>}
       </div>
     )
   };

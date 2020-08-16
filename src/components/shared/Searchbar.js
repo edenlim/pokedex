@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import constants from '../../constants/constants'
-import * as utilities from '../../scripts/utilities'
 import * as actions from '../../action'
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
@@ -19,11 +18,8 @@ class Searchbar extends Component {
     const action = this.props[`search${path}`]
     const query = `${api[path]}${document.getElementById('searchQuery').value}`
     if (!res) {
-      ajax.request(query, this.search)
+      ajax.searchPokemon(query, this.search)
     } else {
-      this.setState({
-        ...res
-      })
       action(res)
     }
   }
